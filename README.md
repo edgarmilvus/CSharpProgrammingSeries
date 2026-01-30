@@ -1,7 +1,7 @@
 # CSharpProgrammingSeries
 
 On Amazon:
-[https://tinyurl.com/CSharpProgrammingSeries](https://tinyurl.com/CSharpProgrammingSeries)
+[https://tinyurl.com/CSharpProgrammingBooks](https://tinyurl.com/CSharpProgrammingBooks)
 
 On LeanPub.com:
 [https://tinyurl.com/CSharpProgrammingSeries](https://leanpub.com/u/edgarmilvus)
