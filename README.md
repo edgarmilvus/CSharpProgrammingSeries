@@ -1,11 +1,11 @@
 # CSharpProgrammingSeries
 
 On Amazon:
-[https://tinyurl.com/CSharpProgrammingBooks](https://tinyurl.com/CSharpProgrammingBooks)
+[CSharp Programming Books](https://tinyurl.com/CSharpProgrammingBooks)
 
 On LeanPub.com:
-[https://tinyurl.com/CSharpProgrammingSeries](https://leanpub.com/u/edgarmilvus)
-
+[CSharp Programming Books](https://leanpub.com/u/edgarmilvus)
+ 
 CSharp Programming Series
 
 Don't just learn syntax. Become the Architect of the AI Era.
