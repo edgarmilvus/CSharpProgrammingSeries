@@ -40,3 +40,16 @@ Edgar Milvus is a Senior Software Architect and technical educator committed to 
 ---
 
 *Start your journey today and future-proof your career.*
+
+---
+
+Check also the
+
+[Python Programming Series](https://github.com/edgarmilvus/PythonProgrammingSeries)
+
+and the
+
+[JS Typescript Programming Series](https://github.com/edgarmilvus/JSTypescriptProgrammingSeries)
+
+
+
