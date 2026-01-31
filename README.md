@@ -1,5 +1,8 @@
 # CSharpProgrammingSeries
 
+
+
+*   **On Lemonsqueezy.com (PREFERRED, you get lower prices and I get more than the other stores):** [CSharp Programming Books](https://bookflix.lemonsqueezy.com/)
 *   **On Amazon:** [CSharp Programming Books](https://tinyurl.com/CSharpProgrammingBooks)
 *   **On LeanPub.com:** [CSharp Programming Books](https://leanpub.com/u/edgarmilvus)
  
