@@ -2,10 +2,10 @@
 
 
 
-*   **On Lemonsqueezy.com (PREFERRED, you get lower prices and I get more than the other stores):** [CSharp Programming Books](https://bookflix.lemonsqueezy.com/)
-*   **On Amazon:** [CSharp Programming Books](https://tinyurl.com/CSharpProgrammingBooks)
-*   **On LeanPub.com:** [CSharp Programming Books](https://leanpub.com/u/edgarmilvus)
- 
+*   **On Lemonsqueezy.com (PREFERRED, you get lower prices and I get more than the other stores):** <br>[CSharp Programming Books on Lemonsqueezy](https://bookflix.lemonsqueezy.com/)
+*   **On LeanPub.com:** [CSharp Programming Books on Leanpub](https://leanpub.com/u/edgarmilvus)
+*   **On Amazon (only vol. 1,2,3):** [CSharp Programming Books on Amazon](https://tinyurl.com/CSharpProgrammingBooks)
+
 
 ## Don't just learn syntax. Become the Architect of the AI Era.
 
