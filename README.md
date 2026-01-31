@@ -21,8 +21,7 @@ The **C# & AI Masterclass** is a comprehensive, multi-volume educational series 
 ### PHASE 1: THE FOUNDATIONS (Beginner to Professional)
 *Build a rock-solid understanding of the language mechanics before abstracting them away.*
 
-1.  **Book 1: The C# Foundations.** Syntax, Type System, and Logic. From "Hello World" to building your first Rule-Based Chatbot.
-    Buy it on [Lemonsqueezy.com](https://bookflix.lemonsqueezy.com/checkout/buy/f3bed945-ffc7-4dab-9561-ef795bf8f04f)   
+1.  **Book 1: The C# Foundations.** Syntax, Type System, and Logic. From "Hello World" to building your first Rule-Based Chatbot.<br>Buy it on [Lemonsqueezy.com](https://bookflix.lemonsqueezy.com/checkout/buy/f3bed945-ffc7-4dab-9561-ef795bf8f04f)   
 3.  **Book 2: Advanced OOP & AI Data Structures.** Mastering Classes, Interfaces, Inheritance, and Generics to model complex systems.
 4.  **Book 3: Data Manipulation, LINQ & Vectors.** From manual Data Structures (HashMaps) to the declarative power of LINQ and SIMD Vectorization.
 
