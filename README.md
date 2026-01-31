@@ -33,6 +33,7 @@ The **C# & AI Masterclass** is a comprehensive, multi-volume educational series 
 *Master the complexities of modern, scalable software development.*
 
 4.  **Book 4: Asynchronous AI Pipelines.** Mastering Async/Await, Threading, and Channels for high-throughput inference.
+<br>Buy it on [Lemonsqueezy.com](https://bookflix.lemonsqueezy.com/checkout/buy/d0f27a8d-b236-4876-93df-26098b1729a1)
 5.  **Book 5: Building AI Web APIs.** ASP.NET Core, SignalR, and Real-Time streaming.
 6.  **Book 6: Intelligent Data Access.** Entity Framework Core, Vector Databases (Pinecone/Qdrant), and RAG patterns.
 7.  **Book 7: Cloud-Native AI & Microservices.** Docker, Kubernetes, and scaling AI services in the cloud.
