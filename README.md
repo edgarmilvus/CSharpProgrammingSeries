@@ -1,8 +1,6 @@
 # CSharpProgrammingSeries
 
 
-
-<!--*   **On Payhip.com (PREFERRED, you get lower prices and I get more than the other stores):** <br>[CSharp Programming Books on Payhip](https://payhip.com/textflix/collection/c-ai-masterclass)-->
 *   **On LeanPub.com:** [CSharp Programming Books on Leanpub](https://leanpub.com/u/edgarmilvus)
 *   **On Amazon (only vol. 1,2,3):** [CSharp Programming Books on Amazon](https://tinyurl.com/CSharpProgrammingBooks)
 
@@ -25,18 +23,18 @@ The **C# & AI Masterclass** is a comprehensive, multi-volume educational series 
 *Build a rock-solid understanding of the language mechanics before abstracting them away.*
 
 1.  **Book 1: The C# Foundations.** Syntax, Type System, and Logic. From "Hello World" to building your first Rule-Based Chatbot.
-   <br>Buy it on [Payhip.com](https://payhip.com/b/N5ZCL)
+   
 3.  **Book 2: Advanced OOP & AI Data Structures.** Mastering Classes, Interfaces, Inheritance, and Generics to model complex systems.
-   <br>Buy it on [Payhip.com](https://payhip.com/b/lox0I)
+   
 5.  **Book 3: Data Manipulation, LINQ & Vectors.** From manual Data Structures (HashMaps) to the declarative power of LINQ and SIMD Vectorization.
-   <br>Buy it on [Payhip.com](https://payhip.com/b/3cCa9)
+   
 
 
 ### PHASE 2: MODERN ARCHITECTURE (Professional to Senior)
 *Master the complexities of modern, scalable software development.*
 
 4.  **Book 4: Asynchronous AI Pipelines.** Mastering Async/Await, Threading, and Channels for high-throughput inference.
-<br>Buy it on [Payhip.com](https://payhip.com/b/n8FCb)
+ 
 5.  **Book 5: Building AI Web APIs.** ASP.NET Core, SignalR, and Real-Time streaming.
 6.  **Book 6: Intelligent Data Access.** Entity Framework Core, Vector Databases (Pinecone/Qdrant), and RAG patterns.
 7.  **Book 7: Cloud-Native AI & Microservices.** Docker, Kubernetes, and scaling AI services in the cloud.
