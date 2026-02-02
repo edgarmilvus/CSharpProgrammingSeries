@@ -2,7 +2,7 @@
 
 
 
-*   **On Payhip.com (PREFERRED, you get lower prices and I get more than the other stores):** <br>[CSharp Programming Books on Payhip](https://payhip.com/textflix/collection/c-ai-masterclass)
+<!--*   **On Payhip.com (PREFERRED, you get lower prices and I get more than the other stores):** <br>[CSharp Programming Books on Payhip](https://payhip.com/textflix/collection/c-ai-masterclass)-->
 *   **On LeanPub.com:** [CSharp Programming Books on Leanpub](https://leanpub.com/u/edgarmilvus)
 *   **On Amazon (only vol. 1,2,3):** [CSharp Programming Books on Amazon](https://tinyurl.com/CSharpProgrammingBooks)
 
