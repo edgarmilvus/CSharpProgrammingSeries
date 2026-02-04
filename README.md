@@ -40,6 +40,10 @@ The **C# & AI Masterclass** is a comprehensive, multi-volume educational series 
 7.  **Book 7: Cloud-Native AI & Microservices.** Docker, Kubernetes, and scaling AI services in the cloud (only on leanpub.com).
 8.  **Book 8: The Core of AI Engineering.** Microsoft Semantic Kernel & Agentic Patterns (only on leanpub.com).
 9.  **Book 9: Edge AI & Local Inference.** Running LLMs (Llama/Phi) locally with C# and ONNX (only on leanpub.com).
+
+
+*   **On LeanPub.com:** [CSharp Programming Books on Leanpub](https://leanpub.com/u/edgarmilvus)
+*   **On Amazon (only vol. 1, 2, 3, 4):** 
     
 ## About the Author
 
