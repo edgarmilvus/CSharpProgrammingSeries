@@ -2,7 +2,7 @@
 
 
 *   **On LeanPub.com:** [CSharp Programming Books on Leanpub](https://leanpub.com/u/edgarmilvus)
-*   **On Amazon (only vol. 1,2,3):** [CSharp Programming Books on Amazon](https://tinyurl.com/CSharpProgrammingBooks)
+*   **On Amazon (only vol. 1, 2, 3, 4):** [CSharp Programming Books on Amazon](https://tinyurl.com/CSharpProgrammingBooks)
 
 
 ## Don't just learn syntax. Become the Architect of the AI Era.
@@ -35,11 +35,11 @@ The **C# & AI Masterclass** is a comprehensive, multi-volume educational series 
 
 4.  **Book 4: Asynchronous AI Pipelines.** Mastering Async/Await, Threading, and Channels for high-throughput inference.
  
-5.  **Book 5: Building AI Web APIs.** ASP.NET Core, SignalR, and Real-Time streaming. 
-6.  **Book 6: Intelligent Data Access.** Entity Framework Core, Vector Databases (Pinecone/Qdrant), and RAG patterns.
-7.  **Book 7: Cloud-Native AI & Microservices.** Docker, Kubernetes, and scaling AI services in the cloud.
-8.  **Book 8: The Core of AI Engineering.** Microsoft Semantic Kernel & Agentic Patterns.
-9.  **Book 9: Edge AI & Local Inference.** Running LLMs (Llama/Phi) locally with C# and ONNX.
+5.  **Book 5: Building AI Web APIs.** ASP.NET Core, SignalR, and Real-Time streaming (only on leanpub.com). 
+6.  **Book 6: Intelligent Data Access.** Entity Framework Core, Vector Databases (Pinecone/Qdrant), and RAG patterns (only on leanpub.com).
+7.  **Book 7: Cloud-Native AI & Microservices.** Docker, Kubernetes, and scaling AI services in the cloud (only on leanpub.com).
+8.  **Book 8: The Core of AI Engineering.** Microsoft Semantic Kernel & Agentic Patterns (only on leanpub.com).
+9.  **Book 9: Edge AI & Local Inference.** Running LLMs (Llama/Phi) locally with C# and ONNX (only on leanpub.com).
     
 ## About the Author
 
