@@ -43,7 +43,7 @@ The **C# & AI Masterclass** is a comprehensive, multi-volume educational series 
 
 
 *   **On LeanPub.com:** [CSharp Programming Books on Leanpub](https://leanpub.com/u/edgarmilvus)
-*   **On Amazon (only vol. 1, 2, 3, 4):** 
+*   **On Amazon (only vol. 1, 2, 3, 4):** [CSharp Programming Books on Amazon](https://tinyurl.com/CSharpProgrammingBooks)
     
 ## About the Author
 
