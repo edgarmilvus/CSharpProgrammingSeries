@@ -35,10 +35,12 @@ The **C# & AI Masterclass** is a comprehensive, multi-volume educational series 
 
 4.  **Book 4: Asynchronous AI Pipelines.** Mastering Async/Await, Threading, and Channels for high-throughput inference.
  
-5.  **Book 5: Building AI Web APIs.** ASP.NET Core, SignalR, and Real-Time streaming.
+5.  **Book 5: Building AI Web APIs.** ASP.NET Core, SignalR, and Real-Time streaming. 
 6.  **Book 6: Intelligent Data Access.** Entity Framework Core, Vector Databases (Pinecone/Qdrant), and RAG patterns.
 7.  **Book 7: Cloud-Native AI & Microservices.** Docker, Kubernetes, and scaling AI services in the cloud.
-
+8.  **Book 8: The Core of AI Engineering.** Microsoft Semantic Kernel & Agentic Patterns.
+9.  **Book 9: Edge AI & Local Inference.** Running LLMs (Llama/Phi) locally with C# and ONNX.
+    
 ## About the Author
 
 Edgar Milvus is a Senior Software Architect and technical educator committed to bridging the gap between classical software engineering and the new wave of Artificial Intelligence. His methodology focuses on deep, structural understanding over superficial tutorials.
