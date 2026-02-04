@@ -1,4 +1,4 @@
-# CSharpProgrammingSeries
+# C# Programming Series ebooks
 
 
 *   **On LeanPub.com:** [CSharp Programming Books on Leanpub](https://leanpub.com/u/edgarmilvus)
