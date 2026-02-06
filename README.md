@@ -63,5 +63,8 @@ and the
 
 [JS Typescript Programming Series - 5 Volumes](https://github.com/edgarmilvus/JSTypescriptProgrammingSeries)
 
+---
+
+[Series Blog](https://programmingcentral.hashnode.dev/series/csharp-programming)
 
 
