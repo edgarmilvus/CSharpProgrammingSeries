@@ -88,6 +88,6 @@ and the
 
 ---
 
-[Series Blog](https://programmingcentral.hashnode.dev/series/csharp-programming)
+[Programming Blog: C#, JS, TS, Python](https://programmingcentral.hashnode.dev)
 
 
