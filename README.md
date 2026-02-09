@@ -9,7 +9,7 @@
 - [Book 6: Intelligent Data Access with EF Core. Vector Databases, RAG, and Memory Storage.](./Volume_06_Intelligent_Data_Access/README.md)
 - [Book 7: Cloud-Native AI & Microservices. Containerizing Agents and Scaling Inference.](./Volume_07_Cloud_Native_AI_Microservices/README.md)
 - [Book 8: The Core of AI Engineering: Microsoft Semantic Kernel & Agentic Patterns.](./Volume_08_Core_of_AI/README.md)
-- [Book 9: Edge AI & Local Inference. Running LLMs (Llama/Phi) locally with C# and ONNX.](./Volume_09_Edge AI_Local_Inference/README.md)
+- [Book 9: Edge AI & Local Inference. Running LLMs (Llama/Phi) locally with C# and ONNX.](./Volume_09_Edge_AI_Local_Inference/README.md)
 - [Book 10: High-Performance C# for AI. Span<T>, SIMD, and Optimizing Token Processing.](./Volume_10_High_Performace_CSharp/README.md)
 
 ## 🛒 Check the series details
