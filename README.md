@@ -32,24 +32,35 @@ The **C# & AI Masterclass** is a comprehensive, multi-volume educational series 
 
 ## The Complete Syllabus
 
-### PHASE 1: THE FOUNDATIONS (Beginner to Professional)
+PHASE 1: THE FOUNDATIONS (Beginner to Professional)
+
 *Build a rock-solid understanding of the language mechanics before abstracting them away.*
 
-1.  **Book 1: The C# Foundations.** Syntax, Type System, and Logic. From "Hello World" to building your first Rule-Based Chatbot.   
-2.  **Book 2: Advanced OOP & AI Data Structures.** Mastering Classes, Interfaces, Inheritance, and Generics to model complex systems.   
-3.  **Book 3: Data Manipulation, LINQ & Vectors.** From manual Data Structures (HashMaps) to the declarative power of LINQ and SIMD Vectorization.
-   
+* [**Book 1: The C# Foundations**](https://programmingcentral.hashnode.dev/csharp-and-ai-programming-series-volume-1-the-c-foundations-syntax-type-system-and-logic-for-modern-developers). Syntax, Type System, and Logic. From "Hello World" to building your first Rule-Based Chatbot.
+    
+* [**Book 2: Advanced OOP & AI Data Structures**](https://programmingcentral.hashnode.dev/csharp-and-ai-programming-series-volume-2-advanced-oop-and-ai-data-structures-modeling-complex-systems-and-tensors). Mastering Classes, Interfaces, Inheritance, and Generics to model complex systems.
+    
+* [**Book 3: Data Manipulation, LINQ & Vectors**](https://programmingcentral.hashnode.dev/csharp-and-ai-programming-series-volume-3-ebook-data-manipulation-linq-and-vectors-from-collections-to-embeddings). From manual Data Structures (HashMaps) to the declarative power of LINQ and SIMD Vectorization.
+    
 
-### PHASE 2: MODERN ARCHITECTURE (Professional to Senior)
+PHASE 2: MODERN ARCHITECTURE (Professional to Senior)
+
 *Master the complexities of modern, scalable software development.*
 
-4.  **Book 4: Asynchronous AI Pipelines.** Mastering Async/Await, Threading, and Channels for high-throughput inference.
- 
-5.  **Book 5: Building AI Web APIs.** ASP.NET Core, SignalR, and Real-Time streaming (only on leanpub.com). 
-6.  **Book 6: Intelligent Data Access.** Entity Framework Core, Vector Databases (Pinecone/Qdrant), and RAG patterns (only on leanpub.com).
-7.  **Book 7: Cloud-Native AI & Microservices.** Docker, Kubernetes, and scaling AI services in the cloud (only on leanpub.com).
-8.  **Book 8: The Core of AI Engineering.** Microsoft Semantic Kernel & Agentic Patterns (only on leanpub.com).
-9.  **Book 9: Edge AI & Local Inference.** Running LLMs (Llama/Phi) locally with C# and ONNX (only on leanpub.com).
+* [**Book 4: Asynchronous AI Pipelines**](https://programmingcentral.hashnode.dev/csharp-and-ai-programming-series-volume-4-asynchronous-ai-pipelines-asyncawait-parallelism-and-streaming-llm-responses).Mastering Async/Await, Threading, and Channels for high-throughput inference.
+    
+* [**Book 5: Building AI Web APIs**](https://programmingcentral.hashnode.dev/csharp-and-ai-programming-series-volume-5-ebook-building-ai-web-apis-with-aspnet-core-serving-models-and-chat-endpoints). ASP.NET Core, SignalR, and Real-Time streaming.
+    
+* [**Book 6: Intelligent Data Access**](https://programmingcentral.hashnode.dev/csharp-and-ai-programming-series-volume-6-intelligent-data-access-with-ef-core-vector-databases-rag-and-memory-storage). Entity Framework Core, Vector Databases (Pinecone/Qdrant), and RAG patterns.
+    
+* [**Book 7: Cloud-Native AI & Microservices**](https://programmingcentral.hashnode.dev/csharp-and-ai-programming-series-volume-7-ebook-cloud-native-ai-and-microservices-containerizing-agents-and-scaling-inference). Docker, Kubernetes, and scaling AI services in the cloud.
+    
+* [**Book 8**: **The Core of AI Engineering**](https://programmingcentral.hashnode.dev/csharp-and-ai-programming-series-volume-8-ebook-the-core-of-ai-engineering-microsoft-semantic-kernel-and-agentic-patterns): Microsoft Semantic Kernel & Agentic Patterns.
+    
+* [**Book 9**: **Edge AI & Local Inference**](https://programmingcentral.hashnode.dev/csharp-and-ai-programming-series-volume-9-ebook-edge-ai-and-local-inference-running-llms-llamaphi-locally-with-c-and-onnx). Running LLMs (Llama/Phi) locally with C# and ONNX.
+    
+* [**Book 10**: **High-Performance C# for AI**](https://programmingcentral.hashnode.dev/csharp-and-ai-programming-series-volume-10-ebook-high-performance-c-for-ai-spant-simd-and-optimizing-token-processing). Span, SIMD, and Optimizing Token Processing.
+    
 
 
 *   **On LeanPub.com:** [CSharp Programming Books on Leanpub](https://leanpub.com/u/edgarmilvus)
