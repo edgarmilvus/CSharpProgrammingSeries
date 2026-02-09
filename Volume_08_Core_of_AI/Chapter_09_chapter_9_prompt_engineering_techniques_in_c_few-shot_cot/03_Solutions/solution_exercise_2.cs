@@ -1,0 +1,93 @@
+
+#
+# These sources are part of the "C# Programming Series" by Edgar Milvus, 
+# you can find it on stores: 
+# 
+# https://www.amazon.com/dp/B0GKJ3NYL6 or https://tinyurl.com/CSharpProgrammingBooks or 
+# https://leanpub.com/u/edgarmilvus (quantity discounts)
+# 
+# New books info: https://linktr.ee/edgarmilvus 
+#
+# MIT License
+# Copyright (c) 2026 Edgar Milvus
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+# Source File: solution_exercise_2.cs
+# Description: Solution for Exercise 2
+# ==========================================
+
+using Microsoft.SemanticKernel;
+using System.ComponentModel;
+
+namespace PromptEngineeringExercises;
+
+public class ProjectPlanningPlugin
+{
+    [KernelFunction, Description("Creates a detailed project plan based on a description.")]
+    public async Task<string> CreateProjectPlan(
+        Kernel kernel,
+        [Description("The project description")] string projectDescription)
+    {
+        // The prompt enforces Chain of Thought (CoT) by explicitly 
+        // asking the AI to perform sequential reasoning steps before outputting the final plan.
+        var prompt = """
+            You are a senior project manager. Your task is to create a detailed project plan. 
+            Before generating the final plan, you must first think through the problem step-by-step.
+
+            Instructions:
+            1. First, identify the key goals.
+            2. Second, break down the goals into major phases.
+            3. Third, assign a priority (High, Medium, Low) to each phase.
+            4. Finally, synthesize this reasoning into a structured project plan.
+
+            The final plan must be formatted using Markdown with clear sections for Goals, Phases, and Priorities.
+
+            Project Description: {{$projectDescription}}
+            """;
+
+        var result = await kernel.InvokePromptAsync<string>(prompt, new KernelArguments { ["projectDescription"] = projectDescription });
+        return result ?? "No plan generated.";
+    }
+}
+
+public static class Program
+{
+    public static async Task Main(string[] args)
+    {
+        var builder = Kernel.CreateBuilder();
+        // builder.AddAzureOpenAIChatCompletion(...); // Configure your LLM here
+        var kernel = builder.Build();
+
+        var planningPlugin = new ProjectPlanningPlugin();
+
+        var complexDescription = "We need to build a new internal tool for tracking employee training, but we don't have a dedicated team yet.";
+
+        Console.WriteLine("--- Project Planning Result ---");
+        
+        try 
+        {
+            var plan = await planningPlugin.CreateProjectPlan(kernel, complexDescription);
+            Console.WriteLine(plan);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: LLM service not configured. (Details: {ex.Message})");
+        }
+    }
+}

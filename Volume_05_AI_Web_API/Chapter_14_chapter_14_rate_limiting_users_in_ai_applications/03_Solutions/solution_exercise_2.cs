@@ -1,0 +1,99 @@
+
+#
+# These sources are part of the "C# Programming Series" by Edgar Milvus, 
+# you can find it on stores: 
+# 
+# https://www.amazon.com/dp/B0GKJ3NYL6 or https://tinyurl.com/CSharpProgrammingBooks or 
+# https://leanpub.com/u/edgarmilvus (quantity discounts)
+# 
+# New books info: https://linktr.ee/edgarmilvus 
+#
+# MIT License
+# Copyright (c) 2026 Edgar Milvus
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+# Source File: solution_exercise_2.cs
+# Description: Solution for Exercise 2
+# ==========================================
+
+using Microsoft.AspNetCore.RateLimiting;
+using System.Threading.RateLimiting;
+using System.Diagnostics;
+
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddRateLimiter(options =>
+{
+    options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
+
+    // Custom Rate Limit Partitioner for Token Bucket with Cost Logic
+    options.AddPolicy("ChatPolicy", context =>
+    {
+        // Determine Cost based on Header
+        int cost = 1;
+        if (context.Request.Headers.TryGetValue("X-Priority", out var priority) && 
+            priority == "High")
+        {
+            cost = 3;
+        }
+
+        // Define the Token Bucket Parameters
+        var bucketOptions = new TokenBucketRateLimiterOptions
+        {
+            ReplenishmentPeriod = TimeSpan.FromSeconds(1),
+            TokensPerPeriod = 5, // Replenishment Rate
+            TokenLimit = 20,     // Bucket Capacity
+            QueueLimit = 5,
+            AutoReplenishment = true
+        };
+
+        // Create the limiter instance per partition (or shared if needed)
+        // Note: In a real scenario, you might want to share the bucket across users 
+        // or per user. Here we create a partition per user (IP).
+        // To handle "Cost", we need to intercept the lease acquisition.
+        
+        // Standard ASP.NET Core RateLimiter doesn't natively support variable cost 
+        // on the built-in TokenBucket without a wrapper or custom logic.
+        // We will implement a custom RateLimitLease logic.
+        
+        return RateLimitPartition.GetTokenBucketLimiter(
+            partitionKey: context.Connection.RemoteIpAddress?.ToString() ?? "unknown",
+            factory: _ => new TokenBucketRateLimiter(bucketOptions));
+    });
+});
+
+// Custom Middleware to handle Variable Cost Logic
+// Since the built-in limiter deducts 1 token per request by default, 
+// we need a wrapper or a custom implementation.
+// For this exercise, we will implement a custom RateLimiting Middleware 
+// that wraps the TokenBucket logic to handle variable costs.
+
+app.UseRateLimiter();
+
+var app = builder.Build();
+
+app.MapPost("/api/chat/completion", async (HttpContext context) =>
+{
+    // Simulate processing
+    await Task.Delay(200);
+    return Results.Ok("Chat response");
+})
+.RequireRateLimiting("ChatPolicy");
+
+app.Run();

@@ -1,0 +1,67 @@
+
+#
+# These sources are part of the "C# Programming Series" by Edgar Milvus, 
+# you can find it on stores: 
+# 
+# https://www.amazon.com/dp/B0GKJ3NYL6 or https://tinyurl.com/CSharpProgrammingBooks or 
+# https://leanpub.com/u/edgarmilvus (quantity discounts)
+# 
+# New books info: https://linktr.ee/edgarmilvus 
+#
+# MIT License
+# Copyright (c) 2026 Edgar Milvus
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+# Source File: theory_theoretical_foundations_part2.cs
+# Description: Theoretical Foundations
+# ==========================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+public class Review
+{
+    public string Text { get; set; }
+    public bool IsSpam { get; set; }
+}
+
+public class DataPreprocessor
+{
+    // A mock embedding function (in reality, this would call an AI model)
+    private static float[] GetEmbedding(string text)
+    {
+        // Simulates converting text to a vector of floats
+        return new float[] { text.Length, text.Average(c => c), 0.0f };
+    }
+
+    public static List<float[]> ProcessReviews(IEnumerable<Review> rawReviews)
+    {
+        // THE PIPELINE
+        // 1. Filter (Where): Remove spam and empty text
+        // 2. Transform (Select): Convert text to embeddings
+        // 3. Materialize (ToList): Execute the pipeline
+        return rawReviews
+            .Where(r => !r.IsSpam)                 // Filter 1
+            .Where(r => !string.IsNullOrWhiteSpace(r.Text)) // Filter 2
+            .Select(r => r.Text.Trim().ToLower())  // Normalize text
+            .Select(t => GetEmbedding(t))          // Transform to Vector
+            .ToList();                             // Immediate Execution
+    }
+}

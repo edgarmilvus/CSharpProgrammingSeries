@@ -1,0 +1,170 @@
+
+#
+# These sources are part of the "C# Programming Series" by Edgar Milvus, 
+# you can find it on stores: 
+# 
+# https://www.amazon.com/dp/B0GKJ3NYL6 or https://tinyurl.com/CSharpProgrammingBooks or 
+# https://leanpub.com/u/edgarmilvus (quantity discounts)
+# 
+# New books info: https://linktr.ee/edgarmilvus 
+#
+# MIT License
+# Copyright (c) 2026 Edgar Milvus
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+# Source File: solution_exercise_3.cs
+# Description: Solution for Exercise 3
+# ==========================================
+
+using Microsoft.Extensions.Caching.Hybrid;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+
+// 1. Complex Model Definition
+public record ToolCall(string Name, Dictionary<string, object> Arguments);
+
+public record LLMResponseUsage(int PromptTokens, int CompletionTokens);
+
+public record LLMResponse(
+    string Content, 
+    LLMResponseUsage Usage, 
+    List<ToolCall> Tools, 
+    Dictionary<string, string> Metadata
+);
+
+// 2. Custom JsonConverter for ToolCall
+public class ToolCallConverter : JsonConverter<ToolCall>
+{
+    public override ToolCall Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+    {
+        throw new NotImplementedException("Read is not required for this exercise.");
+    }
+
+    public override void Write(Utf8JsonWriter writer, ToolCall value, JsonSerializerOptions options)
+    {
+        writer.WriteStartObject();
+        writer.WriteString("Name", value.Name);
+        
+        // Manually serialize the dictionary to preserve complex values
+        writer.WriteStartObject("Arguments");
+        foreach (var kvp in value.Arguments)
+        {
+            // We need to write the property name and then the raw JSON value
+            // Since Dictionary<string, object> might contain JsonElement or other types
+            writer.WritePropertyName(kvp.Key);
+            if (kvp.Value is JsonElement element)
+            {
+                element.WriteTo(writer);
+            }
+            else
+            {
+                // Fallback for simple types
+                JsonSerializer.Serialize(writer, kvp.Value, options);
+            }
+        }
+        writer.WriteEndObject();
+        
+        writer.WriteEndObject();
+    }
+}
+
+// 3. Caching Service
+public interface ILLMOrchestrationService
+{
+    Task<LLMResponse> GetCompletionAsync(string prompt, List<string> tools, CancellationToken ct = default);
+}
+
+public class LLMOrchestrationService : ILLMOrchestrationService
+{
+    private readonly HybridCache _cache;
+    private readonly JsonSerializerOptions _jsonOptions;
+
+    public LLMOrchestrationService(HybridCache cache)
+    {
+        _cache = cache;
+        _jsonOptions = new JsonSerializerOptions
+        {
+            Converters = { new ToolCallConverter() },
+            WriteIndented = true // For visualization
+        };
+    }
+
+    public async Task<LLMResponse> GetCompletionAsync(string prompt, List<string> tools, CancellationToken ct = default)
+    {
+        // Composite Key
+        var key = $"llm:{prompt}:{string.Join(",", tools)}";
+
+        return await _cache.GetOrCreateAsync(
+            key,
+            async (ct) =>
+            {
+                // Simulate LLM call
+                await Task.Delay(300, ct);
+
+                // Generate Mock Complex Object
+                return new LLMResponse(
+                    Content: $"Generated SQL for {prompt}",
+                    Usage: new LLMResponseUsage(10, 20),
+                    Tools: new List<ToolCall>
+                    {
+                        new ToolCall("ExecuteSQL", new Dictionary<string, object>
+                        {
+                            { "query", "SELECT * FROM users" },
+                            { "timeout", 5000 }
+                        })
+                    },
+                    Metadata: new Dictionary<string, string>
+                    {
+                        { "model", "gpt-4" },
+                        { "timestamp", DateTime.UtcNow.ToString("O") }
+                    }
+                );
+            },
+            new HybridCacheEntryOptions { Expiration = TimeSpan.FromMinutes(10) },
+            cancellationToken: ct
+        );
+    }
+}
+
+// Program.cs
+var builder = WebApplication.CreateBuilder(args);
+
+// Configure HybridCache with System.Text.Json
+builder.Services.AddHybridCache(options =>
+{
+    options.DefaultEntryOptions = new HybridCacheEntryOptions { Expiration = TimeSpan.FromMinutes(10) };
+    // Note: The default serializer in HybridCache uses System.Text.Json.
+    // We rely on DI to provide the configured options if needed, 
+    // but HybridCache typically serializes using its internal mechanism.
+    // For this exercise, we assume the service handles serialization if custom logic is needed,
+    // or we configure the global serializer options if supported by the provider.
+});
+
+builder.Services.AddSingleton<ILLMOrchestrationService, LLMOrchestrationService>();
+
+var app = builder.Build();
+
+app.MapGet("/completion", async (string prompt, string tools, ILLMOrchestrationService service, CancellationToken ct) =>
+{
+    var toolList = tools.Split(',').ToList();
+    var result = await service.GetCompletionAsync(prompt, toolList, ct);
+    return Results.Ok(result);
+});
+
+app.Run();
