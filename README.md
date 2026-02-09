@@ -1,4 +1,4 @@
-# C# Programming Series ebooks
+# C# & AI Masterclass: Programming Series ebooks
 
 ## 📚 Volumes Source Code
 - [Book 1: The C# Foundations. Syntax, Type System, and Logic for Modern Developers.](./Volume_01_Foundations/README.md)
@@ -13,7 +13,9 @@
 - [Book 10: High-Performance C# for AI. Span<T>, SIMD, and Optimizing Token Processing.](./Volume_10_High_Performace_CSharp/README.md)
 
 ## 🛒 Check the series details
-- [website](https://programmingcentral.hashnode.dev/c-and-ai-masterclass-ebook-series)
+- [Details](https://programmingcentral.hashnode.dev/c-and-ai-masterclass-ebook-series)
+
+---
 
 *   **Buy On LeanPub.com:** [CSharp Programming Books on Leanpub](https://leanpub.com/u/edgarmilvus)
 *   **Buy On Amazon (only vol. 1, 2, 3, 4):** [CSharp Programming Books on Amazon](https://tinyurl.com/CSharpProgrammingBooks)
@@ -61,7 +63,7 @@ PHASE 2: MODERN ARCHITECTURE (Professional to Senior)
     
 * [**Book 10**: **High-Performance C# for AI**](https://programmingcentral.hashnode.dev/csharp-and-ai-programming-series-volume-10-ebook-high-performance-c-for-ai-spant-simd-and-optimizing-token-processing). Span, SIMD, and Optimizing Token Processing.
     
-
+---
 
 *   **On LeanPub.com:** [CSharp Programming Books on Leanpub](https://leanpub.com/u/edgarmilvus)
 *   **On Amazon (only vol. 1, 2, 3, 4):** [CSharp Programming Books on Amazon](https://tinyurl.com/CSharpProgrammingBooks)
