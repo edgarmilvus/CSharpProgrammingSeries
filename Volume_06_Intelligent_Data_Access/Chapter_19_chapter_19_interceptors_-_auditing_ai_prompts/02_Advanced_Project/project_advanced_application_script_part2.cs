@@ -1,12 +1,9 @@
 
+/*
 #
 # These sources are part of the "C# Programming Series" by Edgar Milvus, 
-# you can find it on stores: 
-# 
-# https://www.amazon.com/dp/B0GKJ3NYL6 or https://tinyurl.com/CSharpProgrammingBooks or 
-# https://leanpub.com/u/edgarmilvus (quantity discounts)
-# 
-# New books info: https://linktr.ee/edgarmilvus 
+# for additional info, new volumes, link to stores:
+# https://github.com/edgarmilvus/CSharpProgrammingSeries
 #
 # MIT License
 # Copyright (c) 2026 Edgar Milvus
@@ -27,10 +24,11 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
+*/
 
-# Source File: project_advanced_application_script_part2.cs
-# Description: Advanced Application Script
-# ==========================================
+// Source File: project_advanced_application_script_part2.cs
+// Description: Advanced Application Script
+// ==========================================
 
     using var auditContext = new AppDbContext(); 
     // Note: We pass 'false' to the constructor or rely on default behavior 

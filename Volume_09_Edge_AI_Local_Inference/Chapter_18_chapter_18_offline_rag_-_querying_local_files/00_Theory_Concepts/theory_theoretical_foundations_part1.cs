@@ -1,12 +1,9 @@
 
+/*
 #
 # These sources are part of the "C# Programming Series" by Edgar Milvus, 
-# you can find it on stores: 
-# 
-# https://www.amazon.com/dp/B0GKJ3NYL6 or https://tinyurl.com/CSharpProgrammingBooks or 
-# https://leanpub.com/u/edgarmilvus (quantity discounts)
-# 
-# New books info: https://linktr.ee/edgarmilvus 
+# for additional info, new volumes, link to stores:
+# https://github.com/edgarmilvus/CSharpProgrammingSeries
 #
 # MIT License
 # Copyright (c) 2026 Edgar Milvus
@@ -27,10 +24,11 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
+*/
 
-# Source File: theory_theoretical_foundations_part1.cs
-# Description: Theoretical Foundations
-# ==========================================
+// Source File: theory_theoretical_foundations_part1.cs
+// Description: Theoretical Foundations
+// ==========================================
 
 string systemPrompt = "You are an AI assistant. Answer the question based EXACTLY on the provided context. If the context does not contain the answer, say 'I don't know'.";
 string context = string.Join("\n\n", retrievedChunks); // The data from the Vector DB
