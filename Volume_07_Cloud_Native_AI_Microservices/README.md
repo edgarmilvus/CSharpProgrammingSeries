@@ -4,7 +4,7 @@ Part of the **Generated Source Code Pack**.
 
 ## 📘 Chapters
  
-- [Chapter 1: Foundations of Cloud-Native AI: From Monoliths to Microservices](./Chapter_01_placeholder_title_1/README.md)
+- [Chapter 1: Foundations of Cloud-Native AI: From Monoliths to Microservices](./Chapter_01_placeholder_title_1)
  
 - [Chapter 2: Your First Agent: Containerizing a Simple C# Microservice](./Chapter_02_placeholder_title_2/README.md)
  
