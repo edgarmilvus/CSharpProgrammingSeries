@@ -47,17 +47,19 @@ namespace CloudNativeAgentInference
     // Mock implementation of the inference engine to demonstrate the logic without actual hardware.
     public class MockGpuEngine : IModelInferenceEngine
     {
+        private static readonly Random _random = new Random();
+
         // Simulates the latency and computation of a GPU-bound operation.
         public async Task<float[]> PredictAsync(float[] input)
         {
             // Simulate network latency and GPU processing time (e.g., 100ms - 300ms)
-            await Task.Delay(new Random().Next(100, 300));
+            await Task.Delay(_random.Next(100, 300));
             
             // Return dummy prediction data (e.g., sentiment score, classification probabilities)
             float[] result = new float[input.Length];
             for (int i = 0; i < input.Length; i++)
             {
-                result[i] = (float)new Random().NextDouble(); // Random confidence score between 0.0 and 1.0
+                result[i] = (float)_random.NextDouble(); // Random confidence score between 0.0 and 1.0
             }
             return result;
         }
@@ -125,7 +127,7 @@ namespace CloudNativeAgentInference
                 Status = "Success",
                 Confidence = maxScore,
                 IsHighConfidence = isHighConfidence,
-                ProcessingTimeMs = (DateTime.Now - request.Timestamp).TotalMilliseconds
+                ProcessingTimeMs = (DateTime.UtcNow - request.Timestamp).TotalMilliseconds
             };
         }
     }
@@ -162,7 +164,7 @@ namespace CloudNativeAgentInference
             _maxConcurrentRequests = poolSize * 2; // Simulating over-subscription of CPU/GPU
         }
 
-        public async void StartProcessingSimulation()
+        public async Task StartProcessingSimulation()
         {
             Console.WriteLine($"[Orchestrator] Starting simulation with {_agentPool.Count} agents.");
             Console.WriteLine($"[Orchestrator] Max Concurrent Capacity: {_maxConcurrentRequests}");
@@ -179,20 +181,20 @@ namespace CloudNativeAgentInference
                     await Task.Delay(500); // Backpressure delay
                 }
 
-                _activeRequests++;
-                
-                // Round-robin agent selection (Load Balancing)
-                InferenceAgent agent = _agentPool[i % _agentPool.Count];
+                Interlocked.Increment(ref _activeRequests);
 
                 // Create a request payload
                 var request = new InferenceRequest
                 {
                     RequestId = $"REQ-{i:000}",
                     InputData = new float[] { 0.5f, 0.1f, 0.9f }, // Mock feature vector
-                    Timestamp = DateTime.Now
+                    Timestamp = DateTime.UtcNow
                 };
 
-                Console.WriteLine($"[EventBus] Received {request.RequestId}. Dispatching to Agent {i % _agentPool.Count}.");
+                int agentIndex = (i - 1) % _agentPool.Count;
+                InferenceAgent agent = _agentPool[agentIndex];
+
+                Console.WriteLine($"[EventBus] Received {request.RequestId}. Dispatching to Agent {agentIndex}.");
 
                 // Asynchronous processing (Fire and Forget to simulate parallelism, but tracked for load)
                 _ = Task.Run(async () => 
@@ -213,7 +215,7 @@ namespace CloudNativeAgentInference
                 });
 
                 // Simulate variable arrival rate of events
-                await Task.Delay(new Random().Next(50, 200));
+                await Task.Delay(Random.Shared.Next(50, 200));
             }
 
             // Wait for remaining tasks to finish
@@ -250,10 +252,8 @@ namespace CloudNativeAgentInference
             var orchestrator = new Orchestrator(initialAgentPoolSize, confidenceThreshold);
 
             // Start the event-driven processing loop
-            orchestrator.StartProcessingSimulation();
-
-            // Keep console open to view async output
-            await Task.Delay(5000); 
+            await orchestrator.StartProcessingSimulation();
+ 
         }
     }
 }
