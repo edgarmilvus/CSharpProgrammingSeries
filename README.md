@@ -18,7 +18,7 @@
 ---
 
 *   **Buy On LeanPub.com:** [CSharp Programming Books on Leanpub](https://leanpub.com/u/edgarmilvus)
-*   **Buy On Amazon (only vol. 1, 2, 3, 4):** [CSharp Programming Books on Amazon](https://tinyurl.com/CSharpProgrammingBooks)
+*   **Buy On Amazon:** [CSharp Programming Books on Amazon](https://tinyurl.com/CSharpProgrammingBooks)
 
 ## Don't just learn syntax. Become the Architect of the AI Era.
 
@@ -66,7 +66,7 @@ PHASE 2: MODERN ARCHITECTURE (Professional to Senior)
 ---
 
 *   **On LeanPub.com:** [CSharp Programming Books on Leanpub](https://leanpub.com/u/edgarmilvus)
-*   **On Amazon (only vol. 1, 2, 3, 4):** [CSharp Programming Books on Amazon](https://tinyurl.com/CSharpProgrammingBooks)
+*   **On Amazon:** [CSharp Programming Books on Amazon](https://tinyurl.com/CSharpProgrammingBooks)
     
 ## About the Author
 
