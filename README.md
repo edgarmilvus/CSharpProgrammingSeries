@@ -80,11 +80,11 @@ Edgar Milvus is a Senior Software Architect and technical educator committed to 
 
 Check also the
 
-[Python Programming Series - 15 Volumes](https://github.com/edgarmilvus/PythonProgrammingSeries)
+[Python Programming Series - 16 Volumes](https://github.com/edgarmilvus/PythonProgrammingSeries)
 
 and the
 
-[JS Typescript Programming Series - 5 Volumes](https://github.com/edgarmilvus/JSTypescriptProgrammingSeries)
+[JS Typescript Programming Series - 6 Volumes](https://github.com/edgarmilvus/JSTypescriptProgrammingSeries)
 
 ---
 
