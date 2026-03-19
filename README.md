@@ -20,6 +20,28 @@
 *   **Buy On LeanPub.com:** [CSharp Programming Books on Leanpub](https://leanpub.com/u/edgarmilvus)
 *   **Buy On Amazon:** [CSharp Programming Books on Amazon](https://tinyurl.com/CSharpProgrammingBooks)
 
+---
+
+19-03-2026 News
+
+### 🚀 Free C# & AI Engineering Masterclass
+
+I have made the entire series available on a dedicated, lightning-fast platform. 
+Each chapter covers everything from the basics to common pitfalls while the ebooks also feature advanced code with comments and exercises with instructor analysis.
+
+👉 [**Access the C# & AI Series on Programming Central**](https://programmingcentral.vercel.app/books/csharp/) 
+
+**Why learn here?**
+*   **Zero Friction:** No signup, no email required, and no "waitlists." Everything is **instantly accessible** for free.
+*   **Structured Learning:** Use the sidebar menu on the left to browse the full curriculum. Chapters flow logically from core concepts to real-world AI implementation.
+*   **Engineering First:** We don't just show syntax; we dive into **practical examples** and identify **common pitfalls** that senior developers avoid.
+*   **Interactive Quizzes:** At the end of each chapter, you can test your knowledge with our custom quiz engine.
+
+**How the quizzes work:**
+The system generates a random set of engineering challenges for every attempt. You get **instant feedback** and, most importantly, a **detailed architectural explanation** for every correct and incorrect choice. It’s designed to ensure you master the *logic* of AI engineering, not just the code.
+
+---
+
 ## Don't just learn syntax. Become the Architect of the AI Era.
 
 The software landscape has changed forever. It is no longer enough to know how to write a loop or a class. Today's top engineers must know how to integrate Large Language Models (LLMs), orchestrate Autonomous Agents, and build high-performance Vector Systems directly into their .NET applications.
