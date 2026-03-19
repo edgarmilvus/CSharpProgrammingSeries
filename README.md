@@ -42,6 +42,10 @@ The system generates a random set of engineering challenges for every attempt. Y
 
 ---
 
+You can find some lessons on youtube also: [@AIProgrammingMasterclass](https://youtube.com/@AIProgrammingMasterclass), they combines theory with detailed code explanations.
+
+---
+
 ## Don't just learn syntax. Become the Architect of the AI Era.
 
 The software landscape has changed forever. It is no longer enough to know how to write a loop or a class. Today's top engineers must know how to integrate Large Language Models (LLMs), orchestrate Autonomous Agents, and build high-performance Vector Systems directly into their .NET applications.
