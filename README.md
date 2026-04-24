@@ -93,6 +93,24 @@ PHASE 2: MODERN ARCHITECTURE (Professional to Senior)
 
 *   **On LeanPub.com:** [CSharp Programming Books on Leanpub](https://leanpub.com/u/edgarmilvus)
 *   **On Amazon:** [CSharp Programming Books on Amazon](https://tinyurl.com/CSharpProgrammingBooks)
+
+---
+
+# Other programming & AI series:
+
+[Python & AI Series](https://github.com/edgarmilvus/PythonProgrammingSeries) 
+
+[Android & Kotlin AI Series](https://github.com/edgarmilvus/AndroidKotlinAIProgrammingSeries)
+
+[Swift & AI Series](https://github.com/edgarmilvus/SwiftAIProgrammingSeries)
+
+[C# & AI Series](https://github.com/edgarmilvus/CSharpProgrammingSeries)  
+
+[Typescript & AI Series](https://github.com/edgarmilvus/JSTypescriptProgrammingSeries)
+
+[Rust & AI Series](https://github.com/edgarmilvus/RustAIProgrammingSeries)
+
+
     
 ## About the Author
 
@@ -101,19 +119,4 @@ Edgar Milvus is a Senior Software Architect and technical educator committed to 
 ---
 
 *Start your journey today and future-proof your career.*
-
----
-
-Check also the
-
-[Python Programming Series - 16 Volumes](https://github.com/edgarmilvus/PythonProgrammingSeries)
-
-and the
-
-[JS Typescript Programming Series - 6 Volumes](https://github.com/edgarmilvus/JSTypescriptProgrammingSeries)
-
----
-
-[Programming Blog: C#, JS, TS, Python](https://programmingcentral.hashnode.dev)
-
-
+ 
