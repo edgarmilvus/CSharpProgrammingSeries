@@ -92,7 +92,7 @@ PHASE 2: MODERN ARCHITECTURE (Professional to Senior)
 ---
 
 *   **On LeanPub.com:** [CSharp Programming Books on Leanpub](https://leanpub.com/u/edgarmilvus)
-*   **On Amazon:** [CSharp Programming Books on Amazon](https://tinyurl.com/CSharpProgrammingBooks)
+<!--  **On Amazon:** [CSharp Programming Books on Amazon](https://tinyurl.com/CSharpProgrammingBooks) -->
 
 ---
 
