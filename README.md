@@ -18,7 +18,7 @@
 ---
 
 *   **Buy On LeanPub.com:** [CSharp Programming Books on Leanpub](https://leanpub.com/u/edgarmilvus)
-*   **Buy On Amazon:** [CSharp Programming Books on Amazon](https://tinyurl.com/CSharpProgrammingBooks)
+<!-- *   **Buy On Amazon:** [CSharp Programming Books on Amazon](https://tinyurl.com/CSharpProgrammingBooks) -->
 
 ---
 
