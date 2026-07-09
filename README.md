@@ -11,8 +11,8 @@
 - [Book 8: The Core of AI Engineering: Microsoft Semantic Kernel & Agentic Patterns.](./Volume_08_Core_of_AI/README.md)
 - [Book 9: Edge AI & Local Inference. Running LLMs (Llama/Phi) locally with C# and ONNX.](./Volume_09_Edge_AI_Local_Inference/README.md)
 - [Book 10: High-Performance C# for AI. Span<T>, SIMD, and Optimizing Token Processing.](./Volume_10_High_Performace_CSharp/README.md)
-- [Book 15: Full Stack AI with Blazor. Building Interactive Copilots and WASM AI.] 
-- [Book 17: Enterprise AI Integration & Process Automation. Connecting LLMs to legacy systems, internal APIs, and real-world business processes.] 
+- Book 15: Full Stack AI with Blazor. Building Interactive Copilots and WASM AI.
+- Book 17: Enterprise AI Integration & Process Automation. Connecting LLMs to legacy systems, internal APIs, and real-world business processes.
 - 
 ## 🛒 Check the series details
 - [Details](https://programmingcentral.hashnode.dev/c-and-ai-masterclass-ebook-series)
